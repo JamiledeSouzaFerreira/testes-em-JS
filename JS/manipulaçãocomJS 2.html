@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+
+        p{
+            font-size: larger;
+        }
+    </style>
+    
+</head>
+ <!-- EXPLICAÇÃO DOS CÓDIGOS QUE EU NÃO ENTENDO BEM
+        inner.HTML: escreve o que foi indicado anteriormente
+    -->
+
+<body>
+    <div>
+    <!-- Caixa de texto pra conversões básicas-->
+    
+    <div>
+        <input type="text" id="caixatexto1">
+        <input type="submit"  onclick="converter_basico()">
+    </div>   
+    <p style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif;"></p>
+    <!--caixa de texto pra converção das fontes-->
+    <div>
+        <input type="text" id="caixatexto2">
+        <input type= "submit" onclick="converter_fonte()">
+    </div>
+    </div>
+
+    <!-- Fontes -->
+     <p id="CourierNew" style="font-family: 'Courier New', Courier, monospace;"></p>
+
+     <p id="FranklinGothic" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
+
+     <p id="GillSans" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></p>
+
+<script>
+ 
+    var texto = ""
+    function converter_basico(){
+
+        texto = document.getElementById('caixatexto1').value 
+        
+        //Maiúsculo, minúsculo, negrito e contagem de caracteres
+        document.getElementsByTagName(`p`)[0].innerHTML = texto
+        document.write(` Em minúsculo: ${texto.toUpperCase()}`)
+        document.write(` Em minúsculo: ${texto.toLowerCase()} <br>`)
+        document.write(` Quantidade de caracteres: ${texto.length} <br>`)
+        document.write(` Em negrito: <strong> ${texto} </strong> <br>`)
+        }
+
+    var texto = ""
+    function converter_fonte(){
+
+        texto = document.getElementById('caixatexto2').value
+
+        // Mudança de fonte
+        document.getElementById('CourierNew').innerHTML = texto
+        document.getElementById('FranklinGothic').innerHTML = texto
+        document.getElementById('GillSans').innerHTML = texto  
+        }
+        
+
+    </script>  
+</body>
+</html>
+
